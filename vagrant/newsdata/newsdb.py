@@ -5,11 +5,10 @@ import psycopg2
 DBNAME = "news"
 
 
-        
 def getPopularArticles():
 
     db = psycopg2.connect(database=DBNAME)
-    c= db.cursor()
+    c = db.cursor()
     popular_articles = '''select articles.title, count(*) as views
            from articles, log
            where log.path = concat('/article/', articles.slug)
@@ -18,20 +17,18 @@ def getPopularArticles():
            limit 3'''
     c.execute(popular_articles)
     rows = c.fetchall()
-    print "\n 1. What are the most popular three articles of all time?"
+    print "\n 1. What are the most popular three articles of all time"
     print "Show me the data for #1! \n"
     for row in rows:
         print " ", row[0], "-", row[1], "views"
     db.close()
-    
-           
 
-           
+
 def getPopularAuthors():
-    
+
     db = psycopg2.connect(database=DBNAME)
-    c= db.cursor()
-    popular_authors = '''select authors.name as author, count(log.path) as views
+    c = db.cursor()
+    popular_authors = '''select authors.name as author, count(*) as views
            from articles, log, authors
            where log.path = concat('/article/', articles.slug)
            and articles.author = authors.id
@@ -40,17 +37,17 @@ def getPopularAuthors():
            limit 3'''
     c.execute(popular_authors)
     rows = c.fetchall()
-    print "\n 2. Who are the authors with the most article views?"
+    print "\n 2. Who are the authors with the most article views"
     print "Show me the data for #2! \n"
     for row in rows:
         print " ", row[0], "-", row[1], "views"
     db.close()
-           
+
 
 def getStatusDays():
-    
+
     db = psycopg2.connect(database=DBNAME)
-    c= db.cursor()
+    c = db.cursor()
 
     StatusDays = '''select to_char(date, 'FMMonth FMDD, YYYY'),
                     (err/total * 100) as ratio
@@ -70,11 +67,6 @@ def getStatusDays():
     db.close()
 
 
-
-
 getPopularArticles()
 getPopularAuthors()
 getStatusDays()
-
-
-
