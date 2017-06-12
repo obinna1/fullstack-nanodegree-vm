@@ -10,12 +10,12 @@ https://git-scm.com/. After installed, open git bash or git cmd or even powershe
 5. Now that the files have been cloned onto your computer, you will use vagrant to install the virtual machine. To do this, open command prompt and navigate to the repo you just cloned. For example, if you cloned the repo into your documents directory,
 type cd documents/fullstack-nanodegree-vm.
 6. When inside the folder type "vagrant up". This command will download the configured virtual machine unto your PC. Beware, you may have issues getting past this stage. I had to go into BIOS and enable Intel Virtualization for the VM to install properly.
-To get into BIOS, click f12 or f2 repeadedly as you start up your PC. 
+To get into BIOS, click f12 or f2 repeatedly as you start up your PC. 
 7. After vagrant has installed the VM, you will need to login using the command "vagrant ssh" To access shared directory, cd to /vagrant.
 8. At this point, use ls (list) to confirm you have folders named newsdata, forum and tournaments. For the entirety of this project, you will use the newsdata folder. 
 
 
-Due to Github's max file size of 100mb, I intentionally left out the newsdata.sql, which you will have to download and place in the newsdata folder. Here is a link to the file --https://goo.gl/OtdXKS
+Due to Github's max file size of 100mb, I intentionally left out the newsdata.sql, which you will have to download and place in the newsdata folder. Here is a link to the file --https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip
 After moving the downloaded files to the newsdata folder, navigate to that folder using in your VM and type "psql -d news -f newsdata.sql". This will load the data into the database.
 
 Now this project is asking for the results of three questions which are as follows:
