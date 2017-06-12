@@ -10,7 +10,7 @@ https://git-scm.com/. After installed, open git bash or git cmd or even powershe
 5. Now that the files have been cloned onto your computer, you will use vagrant to install the virtual machine. To do this, open command prompt and navigate to the repo you just cloned. For example, if you cloned the repo into your documents directory,
 type cd documents/fullstack-nanodegree-vm.
 6. When inside the folder type "vagrant up". This command will download the configured virtual machine unto your PC. Beware, you may have issues getting past this stage. I had to go into BIOS and enable Intel Virtualization for the VM to install properly.
-To get into BIOS, click f12 or f2 repeadedly as you start up your PC. 
+To get into BIOS, click f12 or f2 repeatedly as you start up your PC. 
 7. After vagrant has installed the VM, you will need to login using the command "vagrant ssh" To access shared directory, cd to /vagrant.
 8. At this point, use ls (list) to confirm you have folders named newsdata, forum and tournaments. For the entirety of this project, you will use the newsdata folder. 
 
