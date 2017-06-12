@@ -12,6 +12,7 @@ c.execute ('''select articles.title, count(*) as views
            order by views DESC
            limit 3''')
 rows = c.fetchall()
+print " The most popular three articles of all time are:"
 for r in rows:
     print r
     
@@ -26,6 +27,7 @@ c.execute ('''select authors.name as author, count(log.path) as views
            order by views DESC
            limit 3''')
 rows = c.fetchall()
+print " The most popular article authors of all time:"
 for r in rows:
     print r
     
@@ -41,5 +43,6 @@ c.execute ('''select date,(error/total * 100) as percenatges
            order by percenatges DESC
            limit 3''')
 rows = c.fetchall()
+print "Days which more than 1% of requests lead to errors were on:"
 for r in rows:
-    print r 
+    print r
