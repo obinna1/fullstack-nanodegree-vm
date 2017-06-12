@@ -23,4 +23,4 @@ Now this project is asking for the results of three questions which are as follo
 2.  Who are the most popular article authors of all time?
 3.  On which days did more than 1% of requests lead to errors?
 
-To obtain these answers, you will type "python news.db" in the newsdata directory of your virtual machine. 
+To obtain these answers, you will type "python newsdb.py" in the newsdata directory of your virtual machine. 
