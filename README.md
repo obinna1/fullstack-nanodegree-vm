@@ -5,7 +5,7 @@ This project is running off a virtual machine based on ubuntu 14 with postgresql
 1. Download vagrant from https://www.vagrantup.com/. I used vagrant 1.9.5 for windows.
 2. Download oracle virtual box from https://www.virtualbox.org/wiki/Downloads. Don't worry about the extention packs as those are not neccessary for this project.
 3. Go ahead and clone this repo using git or any terminal of your choice. Or you have the option of downloading the project as a zip file from Github. Download git from
-https://git-scm.com/. After installed, open git bash or git cmd. You can find this using the search option on windows OS. Navigate to your directory of choice where you want this project cloned using cd (directory name).
+https://git-scm.com/. After installed, open git bash or git cmd or even powershell which I highly recommend. You can find this using the search option on windows OS. Navigate to your directory of choice where you want this project cloned using cd (directory name).
 4. In your chosen directory, type "git clone", followed by the url of the project. For this project, type git clone https://github.com/obinna1/fullstack-nanodegree-vm.git.
 5. Now that the files have been cloned onto your computer, you will use vagrant to install the virtual machine. To do this, open command prompt and navigate to the repo you just cloned. For example, if you cloned the repo into your documents directory,
 type cd documents/fullstack-nanodegree-vm.
