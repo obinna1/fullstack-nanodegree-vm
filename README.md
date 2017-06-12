@@ -15,7 +15,7 @@ To get into BIOS, click f12 or f2 repeadedly as you start up your PC.
 8. At this point, use ls (list) to confirm you have folders named newsdata, forum and tournaments. For the entirety of this project, you will use the newsdata folder. 
 
 
-Due to Github's max file size of 100mb, I intentionally left out the newsdata.sql, which you will have to download and place in the newsdata folder. Here is a link to the file --https://goo.gl/OtdXKS
+Due to Github's max file size of 100mb, I intentionally left out the newsdata.sql, which you will have to download and place in the newsdata folder. Here is a link to the file --https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip
 After moving the downloaded files to the newsdata folder, navigate to that folder using in your VM and type "psql -d news -f newsdata.sql". This will load the data into the database.
 
 Now this project is asking for the results of three questions which are as follows:
