@@ -16,7 +16,7 @@ def connect(database_name="news"):
 def getPopularArticles():
     db, cursor = connect()
 
-        popular_articles = '''select articles.title, count(*) as views
+    popular_articles = '''select articles.title, count(*) as views
            from articles, log
            where log.path = concat('/article/', articles.slug)
            group by articles.title
